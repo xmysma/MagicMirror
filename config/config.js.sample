@@ -80,7 +80,7 @@ let config = {
 		{
 			module: "weather",
 			position: "top_right",
-			header: "Weather Forecast",
+			header: "Weather Forecastx",
 			config: {
 				weatherProvider: "openmeteo",
 				type: "forecast",

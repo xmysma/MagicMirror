@@ -3,8 +3,10 @@ Module.register("newsfeed", {
 	defaults: {
 		feeds: [
 			{
-				title: "New York Times",
-				url: "https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml",
+				// title: "New York Times",
+				// url: "https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml",
+				title: "Sportbladet Fotboll",
+				url: "https://rss.aftonbladet.se/rss2/small/pages/sections/sportbladet/fotboll/",
 				encoding: "UTF-8" //ISO-8859-1
 			}
 		],
