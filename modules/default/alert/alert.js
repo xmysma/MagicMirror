@@ -21,10 +21,10 @@ Module.register("alert", {
 
 	getTranslations () {
 		return {
+			en: "translations/en.json",
 			// bg: "translations/bg.json",
 			// da: "translations/da.json",
 			// de: "translations/de.json",
-			sv: "translations/sv.json",
 			// eo: "translations/eo.json",
 			// es: "translations/es.json",
 			// fr: "translations/fr.json",
@@ -32,7 +32,7 @@ Module.register("alert", {
 			// nl: "translations/nl.json",
 			// ru: "translations/ru.json",
 			// th: "translations/th.json",
-			en: "translations/en.json"
+			sv: "translations/sv.json"
 		};
 	},
 
