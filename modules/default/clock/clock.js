@@ -17,7 +17,7 @@ Module.register("clock", {
 		showTime: true,
 		showWeek: false,
 		// dateFormat: "dddd, LL",
-		dateFormat: "yyyy-MM-dd",
+		dateFormat: "yyyy-MM-DD dddd",
 		sendNotifications: false,
 
 		/* specific to the analog clock */
