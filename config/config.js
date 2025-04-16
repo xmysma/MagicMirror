@@ -51,7 +51,7 @@ let config = {
 		},
 		{
 			module: "calendar",
-			header: "Högtidsdagar",
+			header: "Helgdagar",
 			position: "top_left",
 			config: {
 				calendars: [
