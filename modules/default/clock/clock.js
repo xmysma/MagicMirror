@@ -133,7 +133,7 @@ Module.register("clock", {
 		}
 
 		if (this.config.showDate) {
-			dateWrapper.innerHTML = now.format(this.config.dateFormat);
+			dateWrapper.innerHTML = this.replaceWeekdays(now.format(this.config.dateFormat));
 			digitalWrapper.appendChild(dateWrapper);
 		}
 
@@ -286,7 +286,7 @@ Module.register("clock", {
 			// Display only an analog clock
 			if (this.config.showDate) {
 				// Add date to the analog clock
-				dateWrapper.innerHTML = now.format(this.config.dateFormat).replace("Wednesday", "Onsdag");
+				dateWrapper.innerHTML = this.replaceWeekdays(now.format(this.config.dateFormat));
 				wrapper.appendChild(dateWrapper);
 			}
 			if (this.config.analogShowDate === "bottom") {
@@ -305,5 +305,16 @@ Module.register("clock", {
 
 		// Return the wrapper to the dom.
 		return wrapper;
+	},
+
+	replaceWeekdays (dateString) {
+		return dateString
+			.replace("Monday", "Måndag")
+			.replace("Tuesday", "Tisdag")
+			.replace("Wednesday", "Onsdag")
+			.replace("Thursday", "Torsdag")
+			.replace("Friday", "Fredag")
+			.replace("Saturday", "Lördag")
+			.replace("Sunday", "Söndag");
 	}
 });
