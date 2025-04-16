@@ -66,36 +66,35 @@ let config = {
 		// {
 		// 	module: "compliments",
 		// 	position: "lower_third"
-		// },
-		{
-			module: "tibber",
-			position: "lower_third"
-		},		
+		// },		
 		{
 			module: "weather",
 			position: "top_right",
 			config: {
 				weatherProvider: "SMHI",
 				type: "current",
-				// lat: 59.47249677718379,  // HAGBY
-				// lon: 18.021319217941848
-				lat: 59.3293, 
-				lon: 18.0686      // STOCKHOLM
+				lat: 59.47249677718379,  // HAGBY
+				lon: 18.021319217941848
 			}
 		},
 		{
 			module: "weather",
 			position: "top_right",
-			header: "Weather Forecast",
+			header: "Utsikter",
 			config: {
 				weatherProvider: "SMHI",
 				type: "forecast",
-				// lat: 59.47249677718379,
-				// lon: 18.021319217941848  // HAGBY
-				lat: 59.3293, 
-				lon: 18.0686			// STOCKHOLM
+				lat: 59.47249677718379,  // HAGBY
+				lon: 18.021319217941848
 			}
 		},
+		{
+			module: "tibber",
+			position: "top_right",
+			config: {
+				text: "17 öre"
+			}
+		},		
 		// {
 		// 	module: "newsfeed",
 		// 	position: "bottom_left",
