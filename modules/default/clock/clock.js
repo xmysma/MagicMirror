@@ -3,13 +3,13 @@
 Module.register("clock", {
 	// Module config defaults.
 	defaults: {
-		// displayType: "digital", // options: digital, analog, both
-		displayType: "analog", // options: digital, analog, both
+		displayType: "digital", // options: digital, analog, both
+		// displayType: "analog", // options: digital, analog, both
 
 		timeFormat: config.timeFormat,
 		timezone: null,
 
-		displaySeconds: true,
+		displaySeconds: false,
 		showPeriod: true,
 		showPeriodUpper: false,
 		clockBold: false,
@@ -21,8 +21,8 @@ Module.register("clock", {
 
 		/* specific to the analog clock */
 		analogSize: "200px",
-		// analogFace: "simple", // options: 'none', 'simple', 'face-###' (where ### is 001 to 012 inclusive)
-		analogFace: "face-003",
+		analogFace: "simple", // options: 'none', 'simple', 'face-###' (where ### is 001 to 012 inclusive)
+		// analogFace: "face-003",
 		analogPlacement: "bottom", // options: 'top', 'bottom', 'left', 'right'
 		analogShowDate: "top", // OBSOLETE, can be replaced with analogPlacement and showTime, options: false, 'top', or 'bottom'
 		secondsColor: "#888888", // DEPRECATED, use CSS instead. Class "clock-second-digital" for digital clock, "clock-second" for analog clock.
