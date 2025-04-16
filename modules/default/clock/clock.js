@@ -133,8 +133,7 @@ Module.register("clock", {
 		}
 
 		if (this.config.showDate) {
-			let nowDate = now.format(this.config.dateFormat);
-			dateWrapper.innerHTML = nowDate.toString().replace("Wednesday", "Onsdag");
+			dateWrapper.innerHTML = now.format(this.config.dateFormat);
 			digitalWrapper.appendChild(dateWrapper);
 		}
 
@@ -287,7 +286,7 @@ Module.register("clock", {
 			// Display only an analog clock
 			if (this.config.showDate) {
 				// Add date to the analog clock
-				dateWrapper.innerHTML = now.format(this.config.dateFormat);
+				dateWrapper.innerHTML = now.format(this.config.dateFormat).replace("Wednesday", "Onsdag");
 				wrapper.appendChild(dateWrapper);
 			}
 			if (this.config.analogShowDate === "bottom") {

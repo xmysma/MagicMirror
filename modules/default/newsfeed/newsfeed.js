@@ -20,7 +20,8 @@ Module.register("newsfeed", {
 		wrapTitle: true,
 		wrapDescription: true,
 		truncDescription: true,
-		lengthDescription: 400,
+		// lengthDescription: 400,
+		lengthDescription: 300,
 		hideLoading: false,
 		reloadInterval: 5 * 60 * 1000, // every 5 minutes
 		updateInterval: 10 * 1000,
