@@ -5,12 +5,14 @@ Module.register("newsfeed", {
 			{
 				// title: "New York Times",
 				// url: "https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml",
-				title: "Sportbladet Fotboll 2",
-				url: "https://rss.aftonbladet.se/rss2/small/pages/sections/sportbladet/fotboll/",
+				// title: "Sportbladet Fotboll 2",
+				// url: "https://rss.aftonbladet.se/rss2/small/pages/sections/sportbladet/fotboll/",
+				title: "Sportnyheter",
+				url: "https://rss.aftonbladet.se/rss2/small/pages/sections/senastenytt/sport/",
 				encoding: "UTF-8" //ISO-8859-1
 			}
 		],
-		showAsList: true,	// false
+		showAsList: false,
 		showSourceTitle: true,
 		showPublishDate: true,
 		broadcastNewsFeeds: true,
