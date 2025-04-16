@@ -5,7 +5,7 @@ Module.register("newsfeed", {
 			{
 				// title: "New York Times",
 				// url: "https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml",
-				title: "Sportbladet Fotboll",
+				title: "Sportbladet Fotboll 2",
 				url: "https://rss.aftonbladet.se/rss2/small/pages/sections/sportbladet/fotboll/",
 				encoding: "UTF-8" //ISO-8859-1
 			}
@@ -15,7 +15,7 @@ Module.register("newsfeed", {
 		showPublishDate: true,
 		broadcastNewsFeeds: true,
 		broadcastNewsUpdates: true,
-		showDescription: false,
+		showDescription: true,
 		showTitleAsUrl: false,
 		wrapTitle: true,
 		wrapDescription: true,
