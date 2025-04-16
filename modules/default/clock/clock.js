@@ -133,7 +133,7 @@ Module.register("clock", {
 		}
 
 		if (this.config.showDate) {
-			dateWrapper.innerHTML = now.format(this.config.dateFormat);
+			dateWrapper.innerHTML = now.format(this.config.dateFormat).replace("Wednesday", "Onsdag");
 			digitalWrapper.appendChild(dateWrapper);
 		}
 
