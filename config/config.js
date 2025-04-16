@@ -58,7 +58,8 @@ let config = {
 					{
 						fetchInterval: 7 * 24 * 60 * 60 * 1000,
 						symbol: "calendar-check",
-						url: "http://myske.se/mskeCalendar.ics"
+						// url: "http://myske.se/mskeCalendar.ics"
+						url: "https://calendar.google.com/calendar/u/0?cid=bWF0dGlhc215c2tlQGdtYWlsLmNvbQ"
 					}
 				]
 			}
