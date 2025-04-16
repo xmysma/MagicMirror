@@ -77,8 +77,8 @@ let config = {
 			config: {
 				weatherProvider: "SMHI",
 				type: "current",
-				lat: 59.4689065709649,
-				lon: 18.036499088098065
+				lat: 59.47249677718379,
+				lon: 18.021319217941848
 			}
 		},
 		{
@@ -88,8 +88,8 @@ let config = {
 			config: {
 				weatherProvider: "SMHI",
 				type: "forecast",
-				lat: 59.4689065709649,
-				lon: 18.036499088098065
+				lat: 59.47249677718379,
+				lon: 18.021319217941848
 			}
 		},
 		// {
