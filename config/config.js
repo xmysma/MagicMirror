@@ -94,7 +94,7 @@ let config = {
 		},
 		{
 			module: "newsfeed",
-			position: "bottom_left",
+			position: "bottom_bar",
 			config: {
 				feeds: [
 					{
@@ -108,22 +108,22 @@ let config = {
 				broadcastNewsUpdates: true
 			}
 		},		
-		{
-			module: "newsfeed",
-			position: "bottom_right",
-			config: {
-				feeds: [
-					{
-						title: "Sportbladet Fotboll 1",
-						url: "https://rss.aftonbladet.se/rss2/small/pages/sections/sportbladet/fotboll/"
-					}
-				],
-				showSourceTitle: true,
-				showPublishDate: true,
-				broadcastNewsFeeds: true,
-				broadcastNewsUpdates: true
-			}
-		},
+		// {
+		// 	module: "newsfeed",
+		// 	position: "bottom_bar",
+		// 	config: {
+		// 		feeds: [
+		// 			{
+		// 				title: "Sportbladet Fotboll 1",
+		// 				url: "https://rss.aftonbladet.se/rss2/small/pages/sections/sportbladet/fotboll/"
+		// 			}
+		// 		],
+		// 		showSourceTitle: true,
+		// 		showPublishDate: true,
+		// 		broadcastNewsFeeds: true,
+		// 		broadcastNewsUpdates: true
+		// 	}
+		// },
 	]
 };
 
