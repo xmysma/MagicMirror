@@ -10,7 +10,7 @@ Module.register("newsfeed", {
 				encoding: "UTF-8" //ISO-8859-1
 			}
 		],
-		showAsList: false,
+		showAsList: true,	// false
 		showSourceTitle: true,
 		showPublishDate: true,
 		broadcastNewsFeeds: true,
@@ -20,8 +20,7 @@ Module.register("newsfeed", {
 		wrapTitle: true,
 		wrapDescription: true,
 		truncDescription: true,
-		// lengthDescription: 400,
-		lengthDescription: 300,
+		lengthDescription: 600,
 		hideLoading: false,
 		reloadInterval: 5 * 60 * 1000, // every 5 minutes
 		updateInterval: 10 * 1000,

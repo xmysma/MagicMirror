@@ -316,5 +316,19 @@ Module.register("clock", {
 			.replace("Friday", "Fredag")
 			.replace("Saturday", "Lördag")
 			.replace("Sunday", "Söndag");
+
+		// const weekdays = {
+		// 	"Monday": "Måndag",
+		// 	"Tuesday": "Tisdag",
+		// 	"Wednesday": "Onsdag",
+		// 	"Thursday": "Torsdag",
+		// 	"Friday": "Fredag",
+		// 	"Saturday": "Lördag",
+		// 	"Sunday": "Söndag"
+		// };
+
+		// return dateString.replace(/\b(Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday)\b/g, match => weekdays[match]);
+
+
 	}
 });
