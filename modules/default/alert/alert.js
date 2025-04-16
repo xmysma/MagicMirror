@@ -21,7 +21,7 @@ Module.register("alert", {
 
 	getTranslations () {
 		return {
-			// en: "translations/en.json",
+			en: "translations/en.json",
 			// bg: "translations/bg.json",
 			// da: "translations/da.json",
 			// de: "translations/de.json",
