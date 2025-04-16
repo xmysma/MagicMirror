@@ -21,17 +21,18 @@ Module.register("alert", {
 
 	getTranslations () {
 		return {
-			bg: "translations/bg.json",
-			da: "translations/da.json",
-			de: "translations/de.json",
+			// bg: "translations/bg.json",
+			// da: "translations/da.json",
+			// de: "translations/de.json",
 			en: "translations/en.json",
-			eo: "translations/eo.json",
-			es: "translations/es.json",
-			fr: "translations/fr.json",
-			hu: "translations/hu.json",
-			nl: "translations/nl.json",
-			ru: "translations/ru.json",
-			th: "translations/th.json"
+			// eo: "translations/eo.json",
+			// es: "translations/es.json",
+			// fr: "translations/fr.json",
+			// hu: "translations/hu.json",
+			// nl: "translations/nl.json",
+			// ru: "translations/ru.json",
+			// th: "translations/th.json",
+			sv: "translations/sv.json"
 		};
 	},
 
