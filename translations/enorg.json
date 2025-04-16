@@ -1,12 +1,12 @@
 {
-	"LOADING": "Laddar …",
+	"LOADING": "Loading …",
 
-	"YESTERDAY": "Igår",
-	"TODAY": "Idag",
-	"TOMORROW": "I morgon",
-	"RUNNING": "Slutar",
-	"EMPTY": "Inga kommande events",
-	"WEEK": "Vecka {weekNumber}",
+	"YESTERDAY": "Yesterday",
+	"TODAY": "Today",
+	"TOMORROW": "Tomorrow",
+	"RUNNING": "Ends in",
+	"EMPTY": "No upcoming events.",
+	"WEEK": "Week {weekNumber}",
 
 	"N": "N",
 	"NNE": "NNE",
@@ -25,7 +25,7 @@
 	"NW": "NW",
 	"NNW": "NNW",
 
-	"FEELS": "Känns som {DEGREE}",
+	"FEELS": "Feels like {DEGREE}",
 	"PRECIP_POP": "PoP",
 	"PRECIP_AMOUNT": "Precipitation amount",
 
@@ -36,7 +36,7 @@
 	"MODULE_ERROR_UNAUTHORIZED": "Authorization failed.",
 	"MODULE_ERROR_UNSPECIFIED": "Check logs for more details.",
 
-	"NEWSFEED_NO_ITEMS": "Inga nyheter för tillfället.",
+	"NEWSFEED_NO_ITEMS": "No news at the moment.",
 
 	"UPDATE_NOTIFICATION": "MagicMirror² update available.",
 	"UPDATE_NOTIFICATION_MODULE": "Update available for {MODULE_NAME} module.",

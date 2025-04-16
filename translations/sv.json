@@ -29,8 +29,23 @@
 
 	"FEELS": "Känns som {DEGREE}",
 
+	"PRECIP_POP": "PoP",
+	"PRECIP_AMOUNT": "Precipitation amount",
+
+	"MODULE_CONFIG_CHANGED": "The configuration options for the {MODULE_NAME} module have changed.\nPlease check the documentation.",
+	"MODULE_CONFIG_ERROR": "Error in the {MODULE_NAME} module. {ERROR}",
+	"MODULE_ERROR_MALFORMED_URL": "Malformed url.",
+	"MODULE_ERROR_NO_CONNECTION": "No internet connection.",
+	"MODULE_ERROR_UNAUTHORIZED": "Authorization failed.",
+	"MODULE_ERROR_UNSPECIFIED": "Check logs for more details.",
+
+	"NEWSFEED_NO_ITEMS": "No news at the moment.",
+
 	"UPDATE_NOTIFICATION": "MagicMirror² uppdatering finns tillgänglig.",
 	"UPDATE_NOTIFICATION_MODULE": "Uppdatering finns tillgänglig av {MODULE_NAME} modulen.",
 	"UPDATE_INFO_SINGLE": "Denna installation ligger {COMMIT_COUNT} commit steg bakom {BRANCH_NAME} grenen.",
-	"UPDATE_INFO_MULTIPLE": "Denna installation ligger {COMMIT_COUNT} commits steg bakom {BRANCH_NAME} grenen."
+	"UPDATE_INFO_MULTIPLE": "Denna installation ligger {COMMIT_COUNT} commits steg bakom {BRANCH_NAME} grenen.",
+	"UPDATE_NOTIFICATION_DONE": "Uppdatering klar för {MODULE_NAME} modulen",
+	"UPDATE_NOTIFICATION_ERROR": "Uppdateringsfel för {MODULE_NAME} modulen",
+	"UPDATE_NOTIFICATION_NEED-RESTART": "Omstart av MagicMirror krävs."
 }

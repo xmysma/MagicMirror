@@ -51,14 +51,16 @@ let config = {
 		},
 		{
 			module: "calendar",
-			header: "Högtidsdagar",
+			header: "Helgdagar",
 			position: "top_left",
 			config: {
 				calendars: [
 					{
 						fetchInterval: 7 * 24 * 60 * 60 * 1000,
 						symbol: "calendar-check",
-						url: "http://myske.se/mskeCalendar.ics"
+						// url: "http://myske.se/mskeCalendar.ics"
+						// url: "https://calendar.google.com/calendar/u/0?cid=bWF0dGlhc215c2tlQGdtYWlsLmNvbQ"
+						url: "https://calendar.google.com/calendar/ical/sv.swedish%23holiday%40group.v.calendar.google.com/public/basic.ics"
 					}
 				]
 			}
@@ -66,56 +68,43 @@ let config = {
 		// {
 		// 	module: "compliments",
 		// 	position: "lower_third"
-		// },
-		{
-			module: "tibber",
-			position: "lower_third"
-		},		
+		// },		
 		{
 			module: "weather",
 			position: "top_right",
 			config: {
 				weatherProvider: "SMHI",
 				type: "current",
-				lat: 59.4689065709649,
-				lon: 18.036499088098065
+				lat: 59.47249677718379,  // HAGBY
+				lon: 18.021319217941848
 			}
 		},
 		{
 			module: "weather",
 			position: "top_right",
-			header: "Weather Forecast",
+			header: "Utsikter",
 			config: {
 				weatherProvider: "SMHI",
 				type: "forecast",
-				lat: 59.4689065709649,
-				lon: 18.036499088098065
+				lat: 59.47249677718379,  // HAGBY
+				lon: 18.021319217941848
 			}
 		},
 		{
-			module: "newsfeed",
-			position: "bottom_bar",
+			module: "tibber",
+			position: "top_right",
 			config: {
-				feeds: [
-					{
-						title: "Sportbladet Hockey 1",
-						url: "https://rss.aftonbladet.se/rss2/small/pages/sections/sportbladet/hockey/"
-					}
-				],
-				showSourceTitle: true,
-				showPublishDate: true,
-				broadcastNewsFeeds: true,
-				broadcastNewsUpdates: true
+				text: "17 öre"
 			}
 		},		
 		// {
 		// 	module: "newsfeed",
-		// 	position: "bottom_bar",
+		// 	position: "bottom_left",
 		// 	config: {
 		// 		feeds: [
 		// 			{
-		// 				title: "Sportbladet Fotboll 1",
-		// 				url: "https://rss.aftonbladet.se/rss2/small/pages/sections/sportbladet/fotboll/"
+		// 				title: "Sportbladet Hockey 1",
+		// 				url: "https://rss.aftonbladet.se/rss2/small/pages/sections/sportbladet/hockey/"
 		// 			}
 		// 		],
 		// 		showSourceTitle: true,
@@ -124,6 +113,23 @@ let config = {
 		// 		broadcastNewsUpdates: true
 		// 	}
 		// },
+		{
+			module: "newsfeed",
+			position: "bottom_bar",
+			config: {
+				feeds: [
+					{
+						title: "Sportnyheter",
+						// url: "https://rss.aftonbladet.se/rss2/small/pages/sections/sportbladet/fotboll/"
+						url: "https://rss.aftonbladet.se/rss2/small/pages/sections/senastenytt/sport/"
+					}
+				],
+				showSourceTitle: true,
+				showPublishDate: true,
+				broadcastNewsFeeds: true,
+				broadcastNewsUpdates: true
+			}
+		},
 	]
 };
 

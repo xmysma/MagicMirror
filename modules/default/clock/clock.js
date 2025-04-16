@@ -4,7 +4,7 @@ Module.register("clock", {
 	// Module config defaults.
 	defaults: {
 		displayType: "digital", // options: digital, analog, both
-		// displayType: "analog", // options: digital, analog, both
+		// displayType: "both", // options: digital, analog, both
 
 		timeFormat: config.timeFormat,
 		timezone: null,
@@ -16,13 +16,14 @@ Module.register("clock", {
 		showDate: true,
 		showTime: true,
 		showWeek: false,
-		dateFormat: "dddd, LL",
+		// dateFormat: "dddd, LL",
+		dateFormat: "yyyy-MM-DD dddd",
 		sendNotifications: false,
 
 		/* specific to the analog clock */
 		analogSize: "200px",
-		analogFace: "simple", // options: 'none', 'simple', 'face-###' (where ### is 001 to 012 inclusive)
-		// analogFace: "face-003",
+		// analogFace: "simple", // options: 'none', 'simple', 'face-###' (where ### is 001 to 012 inclusive)
+		analogFace: "face-003",
 		analogPlacement: "bottom", // options: 'top', 'bottom', 'left', 'right'
 		analogShowDate: "top", // OBSOLETE, can be replaced with analogPlacement and showTime, options: false, 'top', or 'bottom'
 		secondsColor: "#888888", // DEPRECATED, use CSS instead. Class "clock-second-digital" for digital clock, "clock-second" for analog clock.
@@ -132,7 +133,7 @@ Module.register("clock", {
 		}
 
 		if (this.config.showDate) {
-			dateWrapper.innerHTML = now.format(this.config.dateFormat);
+			dateWrapper.innerHTML = this.replaceWeekdays(now.format(this.config.dateFormat));
 			digitalWrapper.appendChild(dateWrapper);
 		}
 
@@ -285,7 +286,7 @@ Module.register("clock", {
 			// Display only an analog clock
 			if (this.config.showDate) {
 				// Add date to the analog clock
-				dateWrapper.innerHTML = now.format(this.config.dateFormat);
+				dateWrapper.innerHTML = this.replaceWeekdays(now.format(this.config.dateFormat));
 				wrapper.appendChild(dateWrapper);
 			}
 			if (this.config.analogShowDate === "bottom") {
@@ -304,5 +305,30 @@ Module.register("clock", {
 
 		// Return the wrapper to the dom.
 		return wrapper;
+	},
+
+	replaceWeekdays (dateString) {
+		return dateString
+			.replace("Monday", "Måndag")
+			.replace("Tuesday", "Tisdag")
+			.replace("Wednesday", "Onsdag")
+			.replace("Thursday", "Torsdag")
+			.replace("Friday", "Fredag")
+			.replace("Saturday", "Lördag")
+			.replace("Sunday", "Söndag");
+
+		// const weekdays = {
+		// 	"Monday": "Måndag",
+		// 	"Tuesday": "Tisdag",
+		// 	"Wednesday": "Onsdag",
+		// 	"Thursday": "Torsdag",
+		// 	"Friday": "Fredag",
+		// 	"Saturday": "Lördag",
+		// 	"Sunday": "Söndag"
+		// };
+
+		// return dateString.replace(/\b(Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday)\b/g, match => weekdays[match]);
+
+
 	}
 });
