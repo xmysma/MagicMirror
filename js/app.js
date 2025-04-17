@@ -210,7 +210,7 @@ function App () {
 			fs.accessSync(helperPath, fs.R_OK);
 		} catch (e) {
 			loadHelper = false;
-			Log.log(`No helper found for module: ${moduleName}.`);
+			Log.log(`No helper found for module: ${moduleName}. ${moduleFile}`);
 		}
 
 		// if the helper was found
