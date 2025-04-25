@@ -9,6 +9,7 @@ type ModuleProperties = {
   getHeader?(): string;
   getTemplate?(): string;
   getTemplateData?(): object;
+  // getCurrentPrice?(): object;
   notificationReceived?(notification: string, payload: any, sender: object): void;
   nunjucksEnvironment?(): void;
   socketNotificationReceived?(notification: string, payload: any): void;

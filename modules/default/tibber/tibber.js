@@ -1,10 +1,9 @@
+// let tibberPrice;
+
 Module.register("tibber", {
 	// Default module config.
 	defaults: {
-		text: "12 öre",
-		apiKey: "DIN_API_NYCKEL",
-		url: "https://api.tibber.com/v1-beta/gql"
-
+		price: ""
 	},
 
 	getTemplate () {
@@ -12,60 +11,75 @@ Module.register("tibber", {
 	},
 
 	getTemplateData () {
-		return this.config;
+		this.fetchTibberData().then((result) => {
+			this.config.price = `${result.now} öre => ${result.next} öre`;
+			console.log("¤¤¤ Tibber", `${result.now} öre => ${result.next} öre`);
+			return this.config;
+		});
 	},
-
-	getCurrentPrice () {
-		return 12.4;
-	}
-
-});
-
-(function () {
-	// const apiKey = "DIN_API_NYCKEL"; // Ersätt med din API-nyckel
-	// const url = "https://api.tibber.com/v1-beta/gql"; // Tibbers GraphQL-endpoint
-
-	const query = `
-		{
-			viewer {
-				homes {
-				id
-				address {
-					city
-					street
-				}
-				currentSubscription {
-					priceInfo {
-					current {
-						total
+	async fetchTibberData () {
+		const query = `
+			{
+				viewer {
+					homes {
+					id
+						address {
+							city
+						}
+						currentSubscription {
+							priceInfo {
+								current {
+									total
+								},
+								today {
+									total
+								},
+								tomorrow {
+									total
+								}
+							}
+						}
 					}
-					}
-				}
 				}
 			}
-		}
-	`;
+		`;
 
-	async function fetchTibberData () {
-		console.log("¤¤¤ fetchTibberData");
-		Log.log("fetchTibberData...");
-		const response = await fetch(config.url, {
+		const response = await fetch(this.config.url, {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json",
-				Authorization: `Bearer ${config.apiKey}`
+				Authorization: `Bearer ${this.config.apiKey}`
 			},
 			body: JSON.stringify({ query })
 		});
 
 		if (!response.ok) {
+			Log.log("error response:", response);
 			throw new Error(`Något gick fel: ${response.statusText}`);
 		}
 
 		const data = await response.json();
-		Log.log("fetchTibberData data", data);
-		console.log(data);
-	}
+		console.log("¤¤¤ Tibber data", data);
+		return new Promise((resolve) => {
+			setTimeout(() => {
+				const prices = this.getPrices(data);
+				resolve(prices);
+			}, 500);
+		});
+	},
+	getPrices (data) {
+		const priceInfo = data?.data.viewer.homes[0].currentSubscription.priceInfo;
+		const nowPrice = Math.round(priceInfo.current.total * 100);
 
-	fetchTibberData().catch(console.error);
+		let nextHour = new Date().getHours() + 1;
+		let nextPrice = 0;
+		if (nextHour === 0) {
+			// next hour is new day
+			nextPrice = Math.round(priceInfo.tomorrow[nextHour].total * 100);
+		} else {
+			// next hour is same day
+			nextPrice = Math.round(priceInfo.today[nextHour].total * 100);
+		}
+		return { now: nowPrice, next: nextPrice };
+	}
 });

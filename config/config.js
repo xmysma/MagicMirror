@@ -72,6 +72,7 @@ let config = {
 		{
 			module: "weather",
 			position: "top_right",
+			header: "Hagby",
 			config: {
 				weatherProvider: "SMHI",
 				type: "current",
@@ -93,8 +94,10 @@ let config = {
 		{
 			module: "tibber",
 			position: "top_right",
+			header: "Tibber",
 			config: {
-				text: "17 öre"
+				apiKey: "dDGt8NxEjGYb_0U1yWgG__X-0fJMxuP5Nq3pnhdD69s",
+				url: "https://api.tibber.com/v1-beta/gql"
 			}
 		},		
 		// {
